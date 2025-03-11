@@ -23,7 +23,7 @@ const Footer = () => {
                         <ul className="space-y-2 text-sm text-gray-300">
                             <li>
                                 <a href="/" className="hover:text-red-400 transition-colors">
-                                    Dashboard
+                                    Home
                                 </a>
                             </li>
                             <li>
@@ -37,8 +37,8 @@ const Footer = () => {
                                 </a>
                             </li>
                             <li>
-                                <a href="/semesters" className="hover:text-red-400 transition-colors">
-                                    Semesters
+                                <a href="/students" className="hover:text-red-400 transition-colors">
+                                    Students
                                 </a>
                             </li>
                         </ul>
@@ -48,22 +48,22 @@ const Footer = () => {
                         <ul className="space-y-2 text-sm text-gray-300">
                             <li>
                                 <a href="mailto:info@husttracker.com" className="hover:text-red-400 transition-colors">
-                                    <i className="fas fa-envelope mr-2"></i>info@husttracker.com
+                                    <i className="fas fa-envelope mr-2"></i>onquangtung18052004@gmail.com
                                 </a>
                             </li>
                             <li>
-                                <a href="tel:+84123456789" className="hover:text-red-400 transition-colors">
-                                    <i className="fas fa-phone mr-2"></i>+84 123 456 789
+                                <a href="tel:+84339813516" className="hover:text-red-400 transition-colors">
+                                    <i className="fas fa-phone mr-2"></i>+84 339 813 516
                                 </a>
                             </li>
                             <li>
                                 <a
-                                    href="https://goo.gl/maps/1234"
+                                    href="https://g.co/kgs/BvvXkfH"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="hover:text-red-400 transition-colors"
                                 >
-                                    <i className="fas fa-map-marker-alt mr-2"></i>Hanoi, Vietnam
+                                    <i className="fas fa-map-marker-alt mr-2"></i>Number 1 Dai Co Viet, Hanoi, Vietnam
                                 </a>
                             </li>
                         </ul>
