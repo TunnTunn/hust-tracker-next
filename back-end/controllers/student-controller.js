@@ -11,4 +11,11 @@ const fetchAllStudents = async (req, res) => {
     }
 };
 
-module.exports = { fetchAllStudents };
+// Fetch a student by ID
+const fetchStudentById = async (req, res) => {
+    const { id } = req.params;
+    const student = await Student.findById(id);
+    res.json(student);
+};
+
+module.exports = { fetchAllStudents, fetchStudentById };

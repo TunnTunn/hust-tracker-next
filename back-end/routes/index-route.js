@@ -1,6 +1,5 @@
 const authRouter = require("./auth-route");
 const coursesRouter = require("./courses-route");
-// const semestersRouter = require("./semesters-route");
 const studentRoute = require("./student-route");
 const enrollmentRouter = require("./enrollment-route");
 
