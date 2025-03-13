@@ -1,0 +1,32 @@
+{
+    "nav": {
+        "home": "Home",
+        "courses": "Courses",
+        "enrollments": "Enrollments",
+        "students": "Students",
+        "profile": "Profile",
+        "logout": "Logout"
+    },
+    "footer": {
+        "description": "Track your academic progress at HUST",
+        "quickLinks": "Quick Links",
+        "contact": "Contact",
+        "address": "Number 1 Dai Co Viet, Hanoi, Vietnam",
+        "rights": "All rights reserved."
+    },
+    "home": {
+        "welcome": "Welcome back",
+        "currentSemester": "Current Semester",
+        "academicPeriod": "Academic period",
+        "currentCPA": "Current CPA",
+        "overallCPA": "Cumulative GPA",
+        "totalCredits": "Total Credits",
+        "creditsCompleted": "Credits completed",
+        "totalCourses": "Total Courses",
+        "coursesRegistered": "Total courses registered",
+        "recentEnrollments": "Recent Enrollments",
+        "viewAll": "View All",
+        "noEnrollments": "No enrollments found",
+        "browseCourses": "Browse Courses"
+    }
+}

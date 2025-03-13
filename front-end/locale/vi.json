@@ -1,0 +1,32 @@
+{
+    "nav": {
+        "home": "Trang chủ",
+        "courses": "Môn học",
+        "enrollments": "Đăng ký",
+        "students": "Sinh viên",
+        "profile": "Hồ sơ",
+        "logout": "Đăng xuất"
+    },
+    "footer": {
+        "description": "Theo dõi tiến độ học tập tại HUST",
+        "quickLinks": "Liên kết nhanh",
+        "contact": "Liên hệ",
+        "address": "Số 1 Đại Cồ Việt, Hà Nội, Việt Nam",
+        "rights": "Đã đăng ký bản quyền."
+    },
+    "home": {
+        "welcome": "Chào mừng trở lại",
+        "currentSemester": "Học kỳ hiện tại",
+        "academicPeriod": "Giai đoạn học tập",
+        "currentCPA": "CPA hiện tại",
+        "overallCPA": "Điểm trung bình tích lũy",
+        "totalCredits": "Tổng số tín chỉ",
+        "creditsCompleted": "Số tín chỉ đã hoàn thành",
+        "totalCourses": "Tổng số môn học",
+        "coursesRegistered": "Tổng số môn học đã đăng ký",
+        "recentEnrollments": "Đăng ký gần đây",
+        "viewAll": "Xem tất cả",
+        "noEnrollments": "Không tìm thấy đăng ký nào",
+        "browseCourses": "Xem danh sách môn học"
+    }
+}

@@ -2,6 +2,7 @@ import { Lexend } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { LanguageProvider } from "../contexts/LanguageContext";
 
 const lexend = Lexend({ subsets: ["latin"] });
 
@@ -20,13 +21,15 @@ export default function RootLayout({ children }) {
                 />
             </head>
             <body className={lexend.className}>
-                <div className="flex flex-col min-h-screen">
-                    <Header />
-                    <main className="flex-grow bg-white">
-                        <div className="max-w-7xl mx-auto px-8 py-8">{children}</div>
-                    </main>
-                    <Footer />
-                </div>
+                <LanguageProvider>
+                    <div className="flex flex-col min-h-screen">
+                        <Header />
+                        <main className="flex-grow bg-white">
+                            <div className="max-w-7xl mx-auto px-8 py-8">{children}</div>
+                        </main>
+                        <Footer />
+                    </div>
+                </LanguageProvider>
             </body>
         </html>
     );

@@ -1,10 +1,12 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect } from "react";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const Footer = () => {
     const pathname = usePathname();
+    const { t } = useLanguage();
+
     // Don't render footer on auth pages - MOVED AFTER HOOKS
     if (pathname?.startsWith("/auth/")) {
         return null;
@@ -16,35 +18,35 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div>
                         <h3 className="text-lg font-semibold mb-4">HUST Tracker</h3>
-                        <p className="text-gray-300 text-sm">Trường ..., tao tự làm web track điểm.</p>
+                        <p className="text-gray-300 text-sm">{t("footer.description")}</p>
                     </div>
                     <div>
-                        <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+                        <h3 className="text-lg font-semibold mb-4">{t("footer.quickLinks")}</h3>
                         <ul className="space-y-2 text-sm text-gray-300">
                             <li>
-                                <a href="/" className="hover:text-red-400 transition-colors">
-                                    Home
-                                </a>
+                                <Link href="/" className="hover:text-red-400 transition-colors">
+                                    {t("nav.home")}
+                                </Link>
                             </li>
                             <li>
-                                <a href="/courses" className="hover:text-red-400 transition-colors">
-                                    Courses
-                                </a>
+                                <Link href="/courses" className="hover:text-red-400 transition-colors">
+                                    {t("nav.courses")}
+                                </Link>
                             </li>
                             <li>
-                                <a href="/enrollments" className="hover:text-red-400 transition-colors">
-                                    Enrollments
-                                </a>
+                                <Link href="/enrollments" className="hover:text-red-400 transition-colors">
+                                    {t("nav.enrollments")}
+                                </Link>
                             </li>
                             <li>
-                                <a href="/students" className="hover:text-red-400 transition-colors">
-                                    Students
-                                </a>
+                                <Link href="/students" className="hover:text-red-400 transition-colors">
+                                    {t("nav.students")}
+                                </Link>
                             </li>
                         </ul>
                     </div>
                     <div>
-                        <h3 className="text-lg font-semibold mb-4">Contact</h3>
+                        <h3 className="text-lg font-semibold mb-4">{t("footer.contact")}</h3>
                         <ul className="space-y-2 text-sm text-gray-300">
                             <li>
                                 <a href="mailto:info@husttracker.com" className="hover:text-red-400 transition-colors">
@@ -63,14 +65,17 @@ const Footer = () => {
                                     rel="noopener noreferrer"
                                     className="hover:text-red-400 transition-colors"
                                 >
-                                    <i className="fas fa-map-marker-alt mr-2"></i>Number 1 Dai Co Viet, Hanoi, Vietnam
+                                    <i className="fas fa-map-marker-alt mr-2"></i>
+                                    {t("footer.address")}
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div className="mt-8 pt-8 border-t border-red-500 text-center text-sm text-gray-300">
-                    <p>&copy; {new Date().getFullYear()} HUST Tracker. All rights reserved.</p>
+                    <p>
+                        &copy; {new Date().getFullYear()} HUST Tracker. {t("footer.rights")}
+                    </p>
                 </div>
             </div>
         </footer>

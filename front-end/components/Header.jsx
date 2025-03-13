@@ -3,11 +3,13 @@
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const Header = () => {
     const router = useRouter();
     const pathname = usePathname();
     const [student, setStudent] = useState(null);
+    const { language, toggleLanguage, t } = useLanguage();
 
     useEffect(() => {
         // Get student from localStorage on component mount
@@ -53,7 +55,7 @@ const Header = () => {
                                     pathname === "/" ? "bg-white text-red-600" : "text-white"
                                 }`}
                             >
-                                Home
+                                {t("nav.home")}
                             </Link>
                             <Link
                                 href="/courses"
@@ -61,7 +63,7 @@ const Header = () => {
                                     pathname === "/courses" ? "bg-white text-red-600" : "text-white"
                                 }`}
                             >
-                                Courses
+                                {t("nav.courses")}
                             </Link>
                             <Link
                                 href="/enrollments"
@@ -69,7 +71,7 @@ const Header = () => {
                                     pathname === "/enrollments" ? "bg-white text-red-600" : "text-white"
                                 }`}
                             >
-                                Enrollments
+                                {t("nav.enrollments")}
                             </Link>
                             <Link
                                 href="/students"
@@ -77,24 +79,30 @@ const Header = () => {
                                     pathname === "/students" ? "bg-white text-red-600" : "text-white"
                                 }`}
                             >
-                                Students
+                                {t("nav.students")}
                             </Link>
                         </nav>
                     )}
 
                     <div className="flex items-center space-x-4 ml-auto">
+                        <button
+                            onClick={toggleLanguage}
+                            className="bg-white text-red-600 px-4 py-2 rounded-md text-sm transition-all duration-200 transform hover:scale-105"
+                        >
+                            {language === "en" ? "VI" : "EN"}
+                        </button>
                         {student && (
                             <div className="flex items-center space-x-4">
                                 <button className="bg-white text-red-600 px-4 py-2 rounded-md text-sm transition-all duration-200 transform hover:scale-105">
                                     <Link href="/profile">
-                                        <i className="fas fa-user"></i> {student.student_name || "Profile"}
+                                        <i className="fas fa-user"></i> {student.student_name || t("nav.profile")}
                                     </Link>
                                 </button>
                                 <button
                                     onClick={handleLogout}
                                     className="bg-white text-red-600 px-4 py-2 rounded-md text-sm transition-all duration-200 transform hover:scale-105"
                                 >
-                                    Logout
+                                    {t("nav.logout")}
                                 </button>
                             </div>
                         )}
