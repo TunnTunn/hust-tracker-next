@@ -20,10 +20,6 @@ app.use(express.json());
 const route = require("./routes/index-route");
 route(app);
 
-const enrollmentRoute = require("./routes/enrollment-route"); // Import enrollment routes
-
-app.use("/api/enrollments", enrollmentRoute); // Use enrollment routes
-
 app.listen(process.env.PORT, () => {
     console.log(`Server is running on http://localhost:${process.env.PORT}`);
 });
